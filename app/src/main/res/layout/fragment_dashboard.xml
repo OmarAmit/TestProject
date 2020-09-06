@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/framestyle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorgray"
+            android:drawableTint="@color/colorgray"
+            android:hint="Who is this investment for? *"
+            android:textColor="@color/colorgray"
+            android:textColorHint="@color/colorgray"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorgray"
+            android:text="is the equity one time or recurring?"
+            android:textColor="@color/colorgray"
+            android:textSize="@dimen/_12ssp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="Fixed"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/switchbuttonstyle"
+                android:textColorHint="@color/dark_green"
+                android:drawableTint="@color/dark_green"
+                android:theme="@style/SCBSwitch"
+            android:shadowColor="@color/space_transparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Variable"
+                android:textColor="@color/colorgray"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorgray"
+            android:hint="Date Of Purchase"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorgray"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:backgroundTint="@color/colorgray"
+            android:hint="Number Of Units"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorgray"
+            android:textSize="@dimen/_12ssp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorgray"
+            android:hint="Purchase Price"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorgray"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:background="@drawable/buttonstle"
+            android:text="Add more"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorwhite" />
+
+    </LinearLayout>
+
+
+</ScrollView>

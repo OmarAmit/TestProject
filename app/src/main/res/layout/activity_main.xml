@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    android:padding="@dimen/_5sdp"
+    tools:context=".view.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:ignore="NotSibling">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/back_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goals"
+            android:textColor="@color/colorblack"
+            android:textSize="@dimen/_20ssp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/text_count_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/_140sdp"
+        android:layout_marginRight="@dimen/_9sdp"
+        android:background="@drawable/badgestyle"
+        android:elevation="7dp"
+        android:padding="@dimen/_3sdp"
+        android:text="4"
+        android:gravity="center"
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/_12ssp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_150sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-8dp"
+            android:background="@drawable/dots_vertical"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/colororange"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/iv_mapSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:src="@drawable/dots_vertical">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/forpadding"
+        android:layout_centerInParent="true"
+        android:background="@drawable/arrowstle"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_arrow_back_black_left24dp"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/forpadding"
+        android:layout_centerInParent="true"
+        android:background="@drawable/arrowstle"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_arrow_forward_blackright_24dp"
+        tools:ignore="UnknownId" />
+
+    <RelativeLayout
+        android:id="@+id/forpadding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearlayout"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:paddingLeft="@dimen/_24sdp"
+        android:paddingRight="@dimen/_24sdp"
+        android:paddingBottom="@dimen/_24sdp"
+        android:paddingTop="@dimen/_8sdp"
+        tools:ignore="NotSibling">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout"
+            android:layout_marginBottom="@dimen/_10sdp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/recyclerview"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/framestyle">
+
+            <include layout="@layout/fragment_dashboard" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="2dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/_15sdp"
+                android:backgroundTint="@color/colorfab"
+                android:onClick="fabbutton"
+                android:src="@drawable/ic_message_black_24dp"
+                android:visibility="gone"
+                app:elevation="@dimen/_16sdp"
+                app:fabSize="normal" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_2sdp"
+                android:backgroundTint="@color/colorfab"
+                android:src="@drawable/ic_message_black_24dp" />
+
+            <TextView
+                android:id="@+id/text_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/badgestyle"
+                android:elevation="7dp"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:text="2"
+                android:textColor="@color/colorwhite"
+                android:textSize="@dimen/_12ssp" />
+        </RelativeLayout>
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--            android:id="@+id/fab_btn"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_alignParentRight="true"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:layout_margin="@dimen/_15sdp"-->
+        <!--            android:backgroundTint="@color/colorfab"-->
+        <!--            android:onClick="fabbutton"-->
+        <!--            android:src="@drawable/ic_message_black_24dp"-->
+        <!--            app:elevation="@dimen/_16sdp"-->
+        <!--            app:fabSize="normal" />-->
+    </RelativeLayout>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:active_item_color="@color/colorgray"
+        app:centre_button_color="@color/colororange"
+        app:centre_button_icon="@drawable/ic_settings_black_24dp"
+        app:inactive_item_color="@color/colorgray"
+        app:space_background_color="@color/colorwhite"
+        app:space_item_icon_size="@dimen/_25sdp" />
+
+
+</RelativeLayout>
